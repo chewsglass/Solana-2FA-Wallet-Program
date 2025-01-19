@@ -1,0 +1,29 @@
+[package]
+name = "Solana_2FA_Wallet_Program"
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.75.0"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+arrayref = "0.3.7"
+solana-program = "1.17"
+sha1 = "0.10.6"
+data-encoding = "2.3.3"
+hmac = "0.12.1"
+borsh = "0.10.3"
+thiserror = "1.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1
