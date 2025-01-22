@@ -15,6 +15,9 @@ I don't think this is secure 100% yet, but I can't seem to find any way it could
 9. Wallet program re-encrypts the secret key with nonce + 1 and writes it to the auth pda for use in the next transaction
 
 
+A few of these steps are not implemented correctly 
+
+
 PR's encouraged  
 
 [Any Q's find me on Twitter same username](https://x.com/retardedchaddev)
